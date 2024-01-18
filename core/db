@@ -1,12 +1,14 @@
 {
   "todos": [
     {
-      "date": "2024-01-18T02:59:16.910Z",
+      "id": "b232361a-6e03-45e5-9179-433bdfb897b3",
+      "date": "2024-01-18T03:27:22.628Z",
       "content": "Primeiro registro!",
       "done": false
     },
     {
-      "date": "2024-01-18T02:59:16.911Z",
+      "id": "7ac0c606-f3fd-4d6d-a0a9-4ba76de39217",
+      "date": "2024-01-18T03:27:22.628Z",
       "content": "Hoje quero aprender!",
       "done": false
     }
