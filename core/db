@@ -1,20 +1,14 @@
 {
   "todos": [
     {
-      "id": "470f466c-1f97-4cae-8a8b-01f8fcdea016",
-      "date": "2024-01-18T03:50:47.960Z",
+      "id": "7047733b-c015-4c0e-a339-3d3440a3d82d",
+      "date": "2024-01-18T04:19:31.855Z",
       "content": "Primeiro registro!",
       "done": false
     },
     {
-      "id": "3700ef3a-f660-4d33-950a-192e705c5081",
-      "date": "2024-01-18T03:50:47.961Z",
-      "content": "Hoje quero aprender!",
-      "done": false
-    },
-    {
-      "id": "d743ee40-73e2-4331-a7bf-6774843ccbd8",
-      "date": "2024-01-18T03:50:47.961Z",
+      "id": "681c129f-2d99-499c-9ed6-c3c85d73af18",
+      "date": "2024-01-18T04:19:31.856Z",
       "content": "Atualizada!!",
       "done": true
     }
