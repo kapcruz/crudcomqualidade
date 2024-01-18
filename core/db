@@ -1,16 +1,22 @@
 {
   "todos": [
     {
-      "id": "b232361a-6e03-45e5-9179-433bdfb897b3",
-      "date": "2024-01-18T03:27:22.628Z",
+      "id": "ab8020ea-9b74-49a9-8e1e-a7f733a34827",
+      "date": "2024-01-18T03:50:24.503Z",
       "content": "Primeiro registro!",
       "done": false
     },
     {
-      "id": "7ac0c606-f3fd-4d6d-a0a9-4ba76de39217",
-      "date": "2024-01-18T03:27:22.628Z",
+      "id": "35807bd9-9a57-434f-bc0b-478e158bf318",
+      "date": "2024-01-18T03:50:24.503Z",
       "content": "Hoje quero aprender!",
       "done": false
+    },
+    {
+      "id": "0e6b836a-265a-426e-8f4d-915488b379f2",
+      "date": "2024-01-18T03:50:24.503Z",
+      "content": "Terceira TODO atualizada",
+      "done": true
     }
   ]
 }

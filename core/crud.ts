@@ -12,7 +12,7 @@ interface Todo {
     done: boolean;
 }
 
-function create(content: string) {
+function create(content: string): Todo {
     const todo: Todo = {
         id: uuid(),
         date: new Date().toISOString(),
@@ -29,7 +29,7 @@ function create(content: string) {
         todos
     }, null, 2));
 
-    return content;
+    return todo;
 }
 
 function read(): Array<Todo> {
@@ -45,9 +45,38 @@ function clearDB() {
     fs.writeFileSync(DB_FILE_PATH, "");
 }
 
+
+function update(id: string, partialTodo: Partial<Todo>): Todo {
+    let updatedTodo;
+    const todos = read();
+    todos.forEach((currentTodo) => {
+        const isToUpdate =  currentTodo.id === id;
+        if(isToUpdate) {
+            updatedTodo = Object.assign(currentTodo, partialTodo);
+        }
+    });
+
+    fs.writeFileSync(DB_FILE_PATH, JSON.stringify({
+        todos,
+    }, null, 2));
+    
+    if(!updatedTodo){
+        throw new Error("Please, provide another ID!");
+    }
+    return updatedTodo;
+}
+
+
 clearDB();
 
 create('Primeiro registro!');
 create('Hoje quero aprender!');
+
+const terceiraTODO = create('Terceira TODO!');
+
+update(terceiraTODO.id, {
+    content: "Terceira TODO atualizada",
+    done: true
+});
 
 console.log(read());
