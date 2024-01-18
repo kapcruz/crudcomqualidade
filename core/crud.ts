@@ -66,7 +66,7 @@ function update(id: string, partialTodo: Partial<Todo>): Todo {
     return updatedTodo;
 }
 
-function updatedByID(id: string, content: string): Todo {
+function updatedContentByID(id: string, content: string): Todo {
     return update(id, {
         content
     });
@@ -84,6 +84,6 @@ update(terceiraTODO.id, {
     done: true
 });
 
-updatedByID(terceiraTODO.id, "Atualizada!!");
+updatedContentByID(terceiraTODO.id, "Atualizada!!");
 
 console.log(read());
