@@ -4,9 +4,47 @@ const DB_FILE_PATH = "./core/db";
 
 console.log('[CRUD]');
 
-function create(content: string){
-    fs.writeFileSync(DB_FILE_PATH, content);
+interface Todo {
+    date: string;
+    content: string;
+    done: boolean;
+}
+
+function create(content: string) {
+    const todo: Todo = {
+        date: new Date().toISOString(),
+        content: content,
+        done: false
+    }
+
+    const todos: Array<Todo> = [
+        ...read(),
+        todo,
+    ];
+
+    fs.writeFileSync(DB_FILE_PATH, JSON.stringify({
+        todos
+    }, null, 2));
+
     return content;
 }
 
-console.log(create('Hoje quero aprender!!!'));
+function read(): Array<Todo> {
+    const dbString = fs.readFileSync(DB_FILE_PATH, "utf-8");
+    const db = JSON.parse(dbString || "{}");
+    if(!db.todos) {
+        return [];  
+    }
+    return db.todos;
+}
+
+function clearDB() {
+    fs.writeFileSync(DB_FILE_PATH, "");
+}
+
+clearDB();
+
+create('Primeiro registro!');
+create('Hoje quero aprender!');
+
+console.log(read());
